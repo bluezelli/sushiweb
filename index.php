@@ -67,12 +67,123 @@
 
 
       <div class="container">
-        <h1> </h1>
+        <h1 class="text-center">Tekst</h1>
       </div>
 
 
+      <div class="container">
+        <div class="row">
+
+<div class="col">
+<div class="card" style="">
+  <img src="./img/images.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
 
 
+
+
+      
+
+<div class="col">
+<div class="card" style="">
+  <img src="./img/images.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+      
+      
+      </div>
+    </div>
+
+
+<!-- 
+      <section class="">
+
+        <div class="container mt-3">
+          
+    <div class="row">
+
+      <div class="col">
+      <div class="card" style="">
+      <img src="./img/images.jpg" class="card-img-top" alt="...">
+  
+      <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+  </div>
+</div>
+
+      </div>
+    </div>
+</div>
+
+
+      </section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--footer-->
+      
+      <div class="col-lg-12 bg-dark mt-5" style="height:300px;">
+<div class="row">
+<div class="col">
+    <p class="lead text-light"> Restaurant informatie </p>
+    </div>
+
+<div class="col text-light">
+<p class="text-light">Contact </p>
+<p>06443540 </p>
+<p>groeneweg </p>
+</div>
+    
+</div>
+    
+
+    
 
 
 
