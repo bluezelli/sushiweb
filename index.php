@@ -1,3 +1,28 @@
+<?php
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +31,7 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">    
+<link rel="stylesheet" href="css/style.css">    
 <title>GoldenFish</title>
 </head>
 <body>
@@ -35,8 +60,7 @@
 </nav>
 
 <div
-
-        class="p-5 text-center bg-image"
+  class="p-5 text-center bg-image"
 
         style="background-repeat:none;
         background-size:cover;
@@ -65,9 +89,52 @@
 
       </div>
 
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <p class = "fs-4">
+              <?php
+              $dagdelen = date("H");
+              if($dagdelen >= 6 && $dagdelen <= 12){
+                echo "GoedeMorgen";
+              } else if($dagdelen >=12 && $dagdelen <= 18){
+                echo "GoedeMiddag";
+              } else if($dagdelen >= 18 && $dagdelen <= 24){
+                echo "Goedenavond";
+              } else {
+                if($dagdelen >= 24 && $dagdelen <= 6){
+                  echo "De winkel is gesloten";
+                }
+              }
+              ?>
+              
+            Welkom bij sushi,</p>
+            <p class = "fs-6">hello</p>
+            <p class = "fs-6">hello</p>
+            <br>
+            <p class = "fs-6">hello</p>
+            <p class = "fs-6">Bezorgtijd vanaf: <?php
+            $time = date("H i");
+            $time = $time + 1;
+            echo $time;
+            ?></p>
+          </div>
+        </div>
+      </div>
+
+ <?php
+ $time = date("l jS \of F Y h:i:s A");
+ $dagdelen = date("H");
+
+
+
+
+?>
+
+
 
       <div class="container">
-        <h1 class="text-center">Tekst</h1>
+        <h1 class="text-center"></h1>
       </div>
 
 
@@ -162,27 +229,40 @@
 
 
 
-
-
-
-
-      <!--footer-->
-      
-      <div class="col-lg-12 bg-dark mt-5" style="height:300px;">
-<div class="row">
-<div class="col">
-    <p class="lead text-light"> Restaurant informatie </p>
-    </div>
-
-<div class="col text-light">
-<p class="text-light">Contact </p>
-<p>06443540 </p>
-<p>groeneweg </p>
-</div>
     
 </div>
     
 
+
+
+<div class="container-fluid bg-dark text-light text-center">
+
+<footer >
+
+<div class="d-flex justify-content-around">
+
+<div class="">
+    <p><b>Contact gegevens </b></br>
+    Adress: valentijnstraat 404 <br>
+    TelefoonNummer: 0645454545 <br>
+    Postadress: 2113 ww Denhaag </p>
+</div>
+
+<div class="">
+    <p><b>Contact gegevens </b></br>
+    Adress: valentijnstraat 404 <br>
+    TelefoonNummer: 0645454545 <br>
+    Postadress: 2113 ww Denhaag </p>
+</div>
+
+</div>
+
+
+
+
+</footer>
+
+</div>
     
 
 

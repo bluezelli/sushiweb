@@ -1,3 +1,23 @@
-.bigimage {
+.formulier{
+    border:1px solid red;
+    align-content:center;
     
+}
+ form {
+    
+ }
+ input{
+    display:inline-block;
+    display:block;
+   
+
+ }
+ footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background-color:black;
+    height: 110px;
+    width: 100%;
 }
