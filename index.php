@@ -96,11 +96,11 @@
               <?php
               $dagdelen = date("H");
               if($dagdelen >= 6 && $dagdelen <= 12){
-                echo "GoedeMorgen";
+                echo "Goede Morgen";
               } else if($dagdelen >=12 && $dagdelen <= 18){
-                echo "GoedeMiddag";
+                echo "Goede Middag";
               } else if($dagdelen >= 18 && $dagdelen <= 24){
-                echo "Goedenavond";
+                echo "Goeden avond";
               } else {
                 if($dagdelen >= 24 && $dagdelen <= 6){
                   echo "De winkel is gesloten";
@@ -109,8 +109,8 @@
               ?>
               
             Welkom bij sushi,</p>
-            <p class = "fs-6">hello</p>
-            <p class = "fs-6">hello</p>
+            <p class = "fs-6">hallo welkom bij sushi</p>
+            <p class = "fs-6"></p>
             <br>
             <p class = "fs-6">hello</p>
             <p class = "fs-6">Bezorgtijd vanaf: <?php
