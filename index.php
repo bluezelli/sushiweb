@@ -1,5 +1,26 @@
 <?php
+  function datumdeliv(){
+    $bezorgingsTijd = date('H:i', strtotime('1 hour'));
+    $datumVanVandaag = date('D');
+    $dagen = date('w');
+    if($dagen == 1){
+      echo "Vandaag is het: <b> Maandag</b>. Wij bezorgen om: $bezorgingsTijd." ;
+    } else if($dagen == 2){
+      echo "Vandaag is het: <b> Dinsdag</b>. Wij bezorgen om: $bezorgingsTijd." ;
+    } else if($dagen == 3){
+      echo "Vandaag is het: <b> Woensdag</b>. Wij bezorgen om: $bezorgingsTijd.";
+    } else if($dagen == 4){
+      echo "Vandaag is het: <b>Donderdag</b>. Wij bezorgen om: $bezorgingsTijd.";
+    } else if($dagen == 5){
+      echo "Vandaag is het: <b>Vrijdag</b>. Wij bezorgen om: $bezorgingsTijd.";
+    } else {
+      
+        echo "wij zijn gesloten het is weekend";
+      
+    }
+  }
 
+  
 
 
 
@@ -94,28 +115,43 @@
           <div class="col">
             <p class = "fs-4">
               <?php
+             $alles = date("l jS \of F Y h:i:s A");
               $dagdelen = date("H");
-              if($dagdelen >= 6 && $dagdelen <= 12){
+              if($dagdelen >= 6 && $dagdelen < 12){
                 echo "GoedeMorgen";
-              } else if($dagdelen >=12 && $dagdelen <= 18){
+              } else if($dagdelen >=12 && $dagdelen < 18){
                 echo "GoedeMiddag";
-              } else if($dagdelen >= 18 && $dagdelen <= 24){
+              } else if($dagdelen >= 18 && $dagdelen < 24){
                 echo "Goedenavond";
               } else {
-                if($dagdelen >= 24 && $dagdelen <= 6){
+                if($dagdelen > 24 && $dagdelen < 6){
                   echo "De winkel is gesloten";
                 }
               }
               ?>
               
             Welkom bij sushi,</p>
-            <p class = "fs-6">hello</p>
-            <p class = "fs-6">hello</p>
+            <p class = "fs-6">wij zijn gespecialiceerd in sushi</p>
+            <p class = "fs-6">
+             <?php 
+            datumdeliv();
+             ?>
+            </p>
             <br>
-            <p class = "fs-6">hello</p>
-            <p class = "fs-6">Bezorgtijd vanaf: <?php
-            $time = date("H i");
-            $time = $time + 1;
+            <p class = "fs-6">
+
+            </p>
+            <p class = "fs-6">Bezorgtijd vanaf nu : <?php
+              // echo datumdeliv();
+              $string = strtotime("+1 hour");
+            $time = date("H:i" , $string);
+            // $time = $time;
+              if($time > 12 && $time < 18){
+                echo "Open";
+              } else {
+                echo "dicht";
+              }
+
             echo $time;
             ?></p>
           </div>
@@ -126,7 +162,16 @@
  $time = date("l jS \of F Y h:i:s A");
  $dagdelen = date("H");
 
+/*
+if($time > 12 && $time < 18){
+  echo "Goedemiddag";
+} else if($time >= 18 && < 24) {
+  echo "Goedeavond";
+} else {
+  echo "Goedeavond";
+}
 
+*/ 
 
 
 ?>

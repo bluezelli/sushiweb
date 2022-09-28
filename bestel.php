@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +85,7 @@
 
 
         <h1>Klantformulier</h1>
-            <form method="POST" action="">
+            <form method="POST" action="formgegevens.php">
                
                 <div class="form-group row my-2">
                     <label for="colFormFname" class="col-sm-2 col-form-label">Voornaam</label>
@@ -98,6 +106,12 @@
                     </div>
                 </div>
                 <div class="form-group row my-2">
+                    <label for="colFormAddress" class="col-sm-2 col-form-label">email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="colFormAddress" name="emails" placeholder="Adres">
+                    </div>
+                </div>
+                <div class="form-group row my-2">
                     <label for="colFormCity" class="col-sm-2 col-form-label">Woonplaats</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="colFormCity" name="city" placeholder="Woonplaats">
@@ -106,7 +120,7 @@
                 <div class="form-group row my-2">
                     <label for="colFormZipcode" class="col-sm-2 col-form-label">Postcode</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="colFormZipcode" name="zipcode" placeholder="Postcode">
+                        <input type="number" class="form-control" id="colFormZipcode" name="zipcode" placeholder="Postcode">
                     </div>
                 </div>
 
@@ -153,25 +167,14 @@ if(isset($_POST['verzenden'])){
     echo "je woont in: " . $city . " en je postcode is: " . $zipcode;
   
     $name = "";
-     $adress = "";
-     $city = "";
-      
-      $lname = "";
+    $adress = "";
+    $city = "";
+    $lname = "";
 
   }
-  
-
-  // else {
-  //   $name = "";
-  //   $adress = "";
-  //   $city = "";
-  //   $zipcode =;
-  //   $lname = "";
-  // }
 
   
 }
-
 
 
 }
