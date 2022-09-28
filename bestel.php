@@ -1,11 +1,31 @@
+<<<<<<< HEAD
 <?php 
 session_start();
+=======
+<?php
+
+
+// session_start();
+
+
+
+// $_SESSION['']
+
+
+
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 
 ?>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,44 +160,67 @@ session_start();
 
 <?php
 
-if(isset($_POST['verzenden'])){
+// if(isset($_POST['verzenden'])){
 
-  $name = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $adress = $_POST['address'];
-  $city = $_POST['city'];
-  $zipcode = $_POST['zipcode'];
+//   $name = $_POST['fname'];
+//   $lname = $_POST['lname'];
+//   $adress = $_POST['address'];
+//   $city = $_POST['city'];
+//   $zipcode = $_POST['zipcode'];
 
 
-  echo "formulier is verzonden". "<br>";
+//   echo "formulier is verzonden". "<br>";
 
-  // if(!empty($_POST['fname']) && !empty($lname) && !empty($adress) && !empty($city) && !empty($zipcode)){
+//   // if(!empty($_POST['fname']) && !empty($lname) && !empty($adress) && !empty($city) && !empty($zipcode)){
  
-    if(!empty($name) && !empty($lname) && !empty($adress) && !empty($city) && !empty($zipcode)){
-  // $name = filter_input(INPUT_POST, "$name", FILTER_VALIDATE_STRING);
-  $adress = filter_input(INPUT_POST, "$adress", FILTER_VALIDATE_EMAIL);
+//     if(!empty($name) && !empty($lname) && !empty($adress) && !empty($city) && !empty($zipcode)){
+//   // $name = filter_input(INPUT_POST, "$name", FILTER_VALIDATE_STRING);
+//   $adress = filter_input(INPUT_POST, "$adress", FILTER_VALIDATE_EMAIL);
   
 
-  if($name === false && $lname === false){
-    echo "je hebt het veld ingevuld maar je hebt niet de juiste characters gebruikt";
-  } else {
-    echo "je naam is: " .$name . " en je achternaam is: " . $lname . "<br>";
+//   if($name === false && $lname === false){
+//     echo "je hebt het veld ingevuld maar je hebt niet de juiste characters gebruikt";
+//   } else {
+//     echo "je naam is: " .$name . " en je achternaam is: " . $lname . "<br>";
     
-    echo "je adress is: " . $adress . "<br>";
-    echo "je woont in: " . $city . " en je postcode is: " . $zipcode;
+//     echo "je adress is: " . $adress . "<br>";
+//     echo "je woont in: " . $city . " en je postcode is: " . $zipcode;
   
+<<<<<<< HEAD
     $name = "";
     $adress = "";
     $city = "";
     $lname = "";
 
   }
+=======
+//     $name = "";
+//      $adress = "";
+//      $city = "";
+//       $lname = "";
+
+//   }
+  
+
+//   // else {
+//   //   $name = "";
+//   //   $adress = "";
+//   //   $city = "";
+//   //   $zipcode =;
+//   //   $lname = "";
+// //   // }
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
   
-}
+// }
 
 
+<<<<<<< HEAD
 }
+=======
+
+// }
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 

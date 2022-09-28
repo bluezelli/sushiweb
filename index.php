@@ -117,12 +117,21 @@
               <?php
              $alles = date("l jS \of F Y h:i:s A");
               $dagdelen = date("H");
+<<<<<<< HEAD
               if($dagdelen >= 6 && $dagdelen < 12){
                 echo "GoedeMorgen";
               } else if($dagdelen >=12 && $dagdelen < 18){
                 echo "GoedeMiddag";
               } else if($dagdelen >= 18 && $dagdelen < 24){
                 echo "Goedenavond";
+=======
+              if($dagdelen >= 6 && $dagdelen <= 12){
+                echo "Goede Morgen";
+              } else if($dagdelen >=12 && $dagdelen <= 18){
+                echo "Goede Middag";
+              } else if($dagdelen >= 18 && $dagdelen <= 24){
+                echo "Goeden avond";
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
               } else {
                 if($dagdelen > 24 && $dagdelen < 6){
                   echo "De winkel is gesloten";
@@ -131,12 +140,17 @@
               ?>
               
             Welkom bij sushi,</p>
+<<<<<<< HEAD
             <p class = "fs-6">wij zijn gespecialiceerd in sushi</p>
             <p class = "fs-6">
              <?php 
             datumdeliv();
              ?>
             </p>
+=======
+            <p class = "fs-6">hallo welkom bij sushi</p>
+            <p class = "fs-6"></p>
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
             <br>
             <p class = "fs-6">
 

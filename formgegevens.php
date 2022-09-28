@@ -1,4 +1,5 @@
 <?php 
+<<<<<<< HEAD
  session_start();
 
  $_SESSION['email'] = $_POST['emails'];
@@ -8,6 +9,12 @@
 $_SESSION['adress'] = $_POST['adress'];
  
 
+=======
+session_start();
+
+
+$_SESSION
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 ?>
@@ -86,6 +93,7 @@ $_SESSION['adress'] = $_POST['adress'];
 <!-- klantbestand-->
 
 
+<<<<<<< HEAD
 <div class="container my-3 justify-content-center d-flex flex-column align-self-center gap-3">
   <div class="card">
     <div class="card-body">
@@ -114,6 +122,8 @@ $_SESSION['adress'] = $_POST['adress'];
 
 
 
+=======
+>>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 
