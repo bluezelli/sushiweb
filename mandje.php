@@ -22,12 +22,14 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Bestellingen</a>
+          <a class="nav-link text-light" href="bestel.php">Bestellingen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Pricing</a>
+          <a class="nav-link text-light" href="formgegevens.php">formgegevens</a>
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link text-light" href="mandje.php">mandje</a>
+        </li>
       </ul>
     </div>
   </div>

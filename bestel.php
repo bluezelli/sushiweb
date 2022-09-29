@@ -1,31 +1,37 @@
-<<<<<<< HEAD
-<?php 
-session_start();
-=======
 <?php
 
+if(isset($_POST['verzenden'])){
 
-// session_start();
+  if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['adress']) && !empty($_POST['city']) && !empty($_POST['zipcode']) && !empty($_POST['email'])){
+    $check = filter_input(INPUT_POST, 'email' , FILTER_VALIDATE_EMAIL);
+    if($check === false){
+      echo "je hebt het niet gefilterd";
+    } else {
+      $_SESSION['fname'] = $_POST['fname'];
+      $_SESSION['lname'] = $_POST['lname'];
+      $_SESSION['adress'] = $_POST['address'];
+      $_SESSION['city'] = $_POST['city'];
+      $_SESSION['zipcode'] = $_POST['zipcode'];
+      $_SESSION['email'] = $_POST['emails'];
+      header('Location: formgegevens.php');
+      
+    }
+
+
+}
+}
 
 
 
-// $_SESSION['']
-
-
-
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 
 ?>
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,10 +56,13 @@ session_start();
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Bestellingen</a>
+          <a class="nav-link text-light" href="bestel.php">Bestellingen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Pricing</a>
+          <a class="nav-link text-light" href="formgegevens.php">formgegevens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="mandje.php">mandje</a>
         </li>
         
       </ul>
@@ -105,7 +114,7 @@ session_start();
 
 
         <h1>Klantformulier</h1>
-            <form method="POST" action="formgegevens.php">
+            <form method="POST">
                
                 <div class="form-group row my-2">
                     <label for="colFormFname" class="col-sm-2 col-form-label">Voornaam</label>
@@ -128,7 +137,7 @@ session_start();
                 <div class="form-group row my-2">
                     <label for="colFormAddress" class="col-sm-2 col-form-label">email</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="colFormAddress" name="emails" placeholder="Adres">
+                        <input type="email" class="form-control" id="colFormAddress" name="emails" placeholder="email">
                     </div>
                 </div>
                 <div class="form-group row my-2">
@@ -158,11 +167,11 @@ session_start();
 
 
 
-<?php
 
-// if(isset($_POST['verzenden'])){
 
-//   $name = $_POST['fname'];
+<!-- // if(isset($_POST['verzenden'])){ -->
+
+<!-- //   $name = $_POST['fname'];
 //   $lname = $_POST['lname'];
 //   $adress = $_POST['address'];
 //   $city = $_POST['city'];
@@ -175,7 +184,7 @@ session_start();
  
 //     if(!empty($name) && !empty($lname) && !empty($adress) && !empty($city) && !empty($zipcode)){
 //   // $name = filter_input(INPUT_POST, "$name", FILTER_VALIDATE_STRING);
-//   $adress = filter_input(INPUT_POST, "$adress", FILTER_VALIDATE_EMAIL);
+//   $adress = filter_input(INPUT_POST, "adress", FILTER_VALIDATE_EMAIL);
   
 
 //   if($name === false && $lname === false){
@@ -186,14 +195,6 @@ session_start();
 //     echo "je adress is: " . $adress . "<br>";
 //     echo "je woont in: " . $city . " en je postcode is: " . $zipcode;
   
-<<<<<<< HEAD
-    $name = "";
-    $adress = "";
-    $city = "";
-    $lname = "";
-
-  }
-=======
 //     $name = "";
 //      $adress = "";
 //      $city = "";
@@ -209,24 +210,19 @@ session_start();
 //   //   $zipcode =;
 //   //   $lname = "";
 // //   // }
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
   
 // }
 
 
-<<<<<<< HEAD
-}
-=======
 
-// }
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
+// } -->
 
 
 
 
 
-?>
+
 
 
 
@@ -273,43 +269,3 @@ session_start();
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

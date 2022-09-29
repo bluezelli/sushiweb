@@ -1,20 +1,14 @@
 <?php 
-<<<<<<< HEAD
  session_start();
 
- $_SESSION['email'] = $_POST['emails'];
- $_SESSION['fname'] = $_POST['fname'];
- $_SESSION['lname'] = $_POST['lname'];
- $_SESSION['zipcode'] = $_POST['zipcode'];
-$_SESSION['adress'] = $_POST['adress'];
+//  $_SESSION['email'] = $_POST['emails'];
+//  $_SESSION['fname'] = $_POST['fname'];
+//  $_SESSION['lname'] = $_POST['lname'];
+//  $_SESSION['zipcode'] = $_POST['zipcode'];
+//  $_SESSION['adress'] = $_POST['adress'];
  
 
-=======
-session_start();
 
-
-$_SESSION
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 ?>
@@ -44,11 +38,15 @@ $_SESSION
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+       
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Bestellingen</a>
+          <a class="nav-link text-light" href="bestel.php">Bestellingen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Pricing</a>
+          <a class="nav-link text-light" href="formgegevens.php">formgegevens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="mandje.php">mandje</a>
         </li>
         
       </ul>
@@ -93,7 +91,6 @@ $_SESSION
 <!-- klantbestand-->
 
 
-<<<<<<< HEAD
 <div class="container my-3 justify-content-center d-flex flex-column align-self-center gap-3">
   <div class="card">
     <div class="card-body">
@@ -107,7 +104,8 @@ $_SESSION
       <h1 class="card-title">Klantgegevens</h1>
  
  
-      <p class="card-text">Zet hier de gegevens van de klant met PHP <?php echo $_SESSION['email']; 
+      <p class="card-text">Zet hier de gegevens van de klant met PHP <?php 
+       echo $_SESSION['email']; 
        echo $_SESSION['fname'];
        echo $_SESSION['lname'];
        echo $_SESSION['adress'];
@@ -122,8 +120,6 @@ $_SESSION
 
 
 
-=======
->>>>>>> ea9f4cd29c1dc329edf2a8ee8c22e128fff668e1
 
 
 
@@ -138,7 +134,7 @@ $_SESSION
 
 <div class="container-fluid bg-dark text-light text-center">
 
-<footer >
+<footer>
 
 <div class="d-flex justify-content-around">
 
