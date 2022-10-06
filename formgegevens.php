@@ -1,11 +1,7 @@
 <?php 
  session_start();
 
-//  $_SESSION['email'] = $_POST['emails'];
-//  $_SESSION['fname'] = $_POST['fname'];
-//  $_SESSION['lname'] = $_POST['lname'];
-//  $_SESSION['zipcode'] = $_POST['zipcode'];
-//  $_SESSION['adress'] = $_POST['adress'];
+
  
 
 
@@ -105,10 +101,11 @@
  
  
       <p class="card-text">Zet hier de gegevens van de klant met PHP <?php 
-       echo $_SESSION['email']; 
-       echo $_SESSION['fname'];
-       echo $_SESSION['lname'];
-       echo $_SESSION['adress'];
+      echo "<br>";
+       echo $_SESSION['email'] .'<br>'; 
+       echo $_SESSION['fname'] . '<br>';
+       echo $_SESSION['lname'] . '<br>';
+       echo $_SESSION['adress'] . '<br>';
        echo $_SESSION['zipcode'] . "<br>";
 
     
