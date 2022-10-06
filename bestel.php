@@ -1,8 +1,8 @@
 <?php
-
+session_start();
 if(isset($_POST['verzenden'])){
 
-  if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['adress']) && !empty($_POST['city']) && !empty($_POST['zipcode']) && !empty($_POST['email'])){
+  if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zipcode']) && !empty($_POST['emails'])){
     $check = filter_input(INPUT_POST, 'email' , FILTER_VALIDATE_EMAIL);
     if($check === false){
       echo "je hebt het niet gefilterd";
@@ -13,7 +13,7 @@ if(isset($_POST['verzenden'])){
       $_SESSION['city'] = $_POST['city'];
       $_SESSION['zipcode'] = $_POST['zipcode'];
       $_SESSION['email'] = $_POST['emails'];
-      header('Location: formgegevens.php');
+      header('Location: mandje.php');
       
     }
 
@@ -119,7 +119,7 @@ if(isset($_POST['verzenden'])){
                 <div class="form-group row my-2">
                     <label for="colFormFname" class="col-sm-2 col-form-label">Voornaam</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="colFormFname" name="fname" placeholder="Voornaam" value="" <?php echo $_POST['fname'] ?>>
+                        <input type="text" class="form-control" id="colFormFname" name="fname" placeholder="Voornaam" value="" >
                     </div>
                 </div>
                 <div class="form-group row my-2">
