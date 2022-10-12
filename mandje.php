@@ -1,5 +1,41 @@
 <?php
+session_start();
+if(isset($_POST['verzenden'])){
+  $nagiri = $_POST['nagiri'];
+  $sashimi = $_POST['sashimi'];
+  $komkommer = $_POST['komkommer'];
+  $tofu = $_POST['tofu'];
+  $paiso = $_POST['paiso'];
+  
+  if(empty($nagiri) || empty($sashimi) || empty($komkommer) || empty($tofu) || empty($paiso)){
+    echo "er is 1 of meerdere velden niet ingevuld";
+  } else {
+    if(!empty($nagiri) && !empty($sashimi) && !empty($komkommer) && !empty($tofu)){
+      $nagifilter = filter_input(INPUT_POST, 'nagiri' , FILTER_SANITIZE_NUMBER_INT);
+      $sashifilter = $nagifilter = filter_input(INPUT_POST, 'sashimi' , FILTER_SANITIZE_NUMBER_INT);
+      $komkommerfilter = filter_input(INPUT_POST, 'komkommer' , FILTER_SANITIZE_NUMBER_INT);
+      $tofufilter = filter_input(INPUT_POST, 'tofu' , FILTER_SANITIZE_NUMBER_INT);
+      $paisofilter = filter_input(INPUT_POST, 'paiso' , FILTER_SANITIZE_NUMBER_INT);
+      if($nagifilter === false && $sashifilter === false && $komkommerfilter === false && $tofufilter === false && $paisofilter){
+        echo "je hebt een of meerdere items goed ingevult";
+      } else {
 
+        $_SESSION['sashimi'] = $sashifilter;
+        $_SESSION['komkommer'] = $komkommerfilter;
+        $_SESSION['tofu'] = $tofufilter;
+        $_SESSION['paiso'] = $paisofilter;
+        $_SESSION['nagiri'] = $nagifilter;
+        header('Location: formgegevens.php');
+
+
+      }
+    }
+  }
+
+
+
+
+}
 
 
 
@@ -86,7 +122,7 @@
 
 
 
-<div class="container">
+<!-- <div class="container">
     <div class="row text-center">
     <h4>bestellijst </h4>
     <p>menu kaart </p>
@@ -149,13 +185,29 @@
 </div>
 
 
+ -->
 
 
 
 
 
+<form method="POST" class="container mb-3">
+
+<label for="nagiri">nagiri </label>
+<input type="number" class="form-control" name="nagiri"><br>
+<label for="sashimi">sashimi </label>
+<input type="number" class="form-control" name="sashimi"><br>
+<label for="komkommer">komkommer </label>
+<input type="number" class="form-control" name="komkommer"><br>
+<label for="tofu">tofu </label>
+<input type="number" class="form-control" name="tofu"><br>
+<label for="paiso">paiso </label>
+<input type="number" class="form-control" name="paiso"><br>
+<input type="submit" name="verzenden" value="submit">
 
 
+
+</form>
 
 
 

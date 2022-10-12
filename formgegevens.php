@@ -91,7 +91,15 @@
   <div class="card">
     <div class="card-body">
       <h1 class="card-title">Bestelling</h1>
-      <p class="card-text">Zet hier de bestelling van de klant neer met PHP</p>
+      <p class="card-text"><?php 
+      echo "<br>";
+      echo $_SESSION['sashimi'] . "<br>";
+      echo $_SESSION['nagiri'] . "<br>";
+      echo $_SESSION['komkommer'] . "<br>";
+      echo $_SESSION['tofu'] . "<br>";
+      echo $_SESSION['paiso'] . "<br>";
+
+      ?></p>
       <p class="card-text">Totaal $: </p>
     </div>
   </div>
